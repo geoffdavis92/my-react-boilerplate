@@ -1,9 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+// core @flow
+import React, { Component } from 'react'
+import { render } from 'react-dom'
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+import {
+	Router,
+	Route,
+	IndexRoute,
+	browserHistory
+} from 'react-router'
+
+import AppWrapper from './AppWrapper'
+import Home from './views/Home'
+
+render((
+	<Router history={browserHistory}>
+		<Route path="/" component={AppWrapper}>
+			<IndexRoute component={Home}/>
+		</Route>
+	</Router>
+),document.getElementById('root'))
