@@ -69,6 +69,13 @@ module.exports = function(grunt) {
 						src: ['*'],
 						dest: srcDir('/styles/'),
 						ext: '.css'
+					},
+					{
+						expand: true,
+						cwd: 'source/sass/layouts',
+						src: ['*'],
+						dest: srcDir('/styles/'),
+						ext: '.css'
 					}
 				]
 			}
