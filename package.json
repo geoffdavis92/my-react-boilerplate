@@ -7,12 +7,13 @@
   "author": "Geoff Davis <geoffdavis92@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "init": "sudo rm -r ./.git && git init && yarn install && cd app && yarn install && flow; cd - && run start",
-    "start": "MODE=dev grunt",
+    "init": "sudo rm -r ./.git && git init && yarn install && cd app && yarn install && flow; cd - && run build:grunt",
     "new:component": "touch source/sass/components/$c.sass app/src/$c.js && printf \"// $c @flow\nimport React, { Component } from 'react'\nimport './styles/$c.css'\n\nexport default class $c extends Component { render() { return <p>$c</p> } }\" >> app/src/$c.js && printf \"// $c\n\" >> source/sass/components/$c.sass",
     "new:helper": "printf \"// helpers/$h @flow\nimport React from 'react'\n\nexport default function $h(props) { return <p>$h</p> }\" >> app/src/helpers/$h.js",
     "new:view": "touch source/sass/layouts/$v.sass app/src/views/$v.js && printf \"// views/$v @flow\nimport React, { Component } from 'react'\nimport '../styles/$v.css'\n\nexport default class $v extends Component { render() { return <p>$v</p> } }\" >> app/src/views/$v.js && printf \"// layouts/$v\n\" >> source/sass/layouts/$v.sass",
-    "remove": "rm source/sass/**/$r.sass app/src/{.,**}/$r.*"
+    "remove": "rm source/sass/**/$r.sass app/src/{.,**}/$r.*",
+    "grunt": "MODE=dev grunt",
+    "grunt:build": "MODE=dev grunt build"
   },
   "dependencies": {
     "grunt": "^1.0.1",
