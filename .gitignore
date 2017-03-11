@@ -1,0 +1,5 @@
+# geoffs-react-boilerplate ignores... 
+node_modules 
+*.log 
+.sass-cache 
+.DS_Store
