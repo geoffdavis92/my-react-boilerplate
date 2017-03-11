@@ -9,9 +9,9 @@
   "scripts": {
     "init": "yarn install && cd app && yarn install && flow; cd - && run start",
     "start": "MODE=dev grunt",
-    "new:component": "touch source/sass/components/$c.sass app/src/$c.js && printf \"// $c @flow\nimport React, { Component } from 'react'\nimport './styles/$c.css'\n\nexport default class $c extends Component { render() { return <p>$c</p> } }\" >> app/src/$c && printf \"// $c\n\" >> source/sass/components/$c.sass",
-    "new:helper": "touch app/src/helpers/$h.js && printf \"// helpers/$h @flow\nimport React from 'react'\n\nexport default function $h(props) { return <p>$h</p> }\"",
-    "new:view": "touch source/sass/layouts/$v.sass app/src/views/$v.js && printf \"// views/$v @flow\nimport React, { Component } from 'react'\nimport '../styles/$v.css'\n\nexport default class $v extends Component { render() { return <p>$v</p> } }\" >> app/src/views/$v && printf \"// layouts/$v\n\" >> source/sass/layouts/$v.sass",
+    "new:component": "touch source/sass/components/$c.sass app/src/$c.js && printf \"// $c @flow\nimport React, { Component } from 'react'\nimport './styles/$c.css'\n\nexport default class $c extends Component { render() { return <p>$c</p> } }\" >> app/src/$c.js && printf \"// $c\n\" >> source/sass/components/$c.sass",
+    "new:helper": "printf \"// helpers/$h @flow\nimport React from 'react'\n\nexport default function $h(props) { return <p>$h</p> }\" >> app/src/helpers/$h.js",
+    "new:view": "touch source/sass/layouts/$v.sass app/src/views/$v.js && printf \"// views/$v @flow\nimport React, { Component } from 'react'\nimport '../styles/$v.css'\n\nexport default class $v extends Component { render() { return <p>$v</p> } }\" >> app/src/views/$v.js && printf \"// layouts/$v\n\" >> source/sass/layouts/$v.sass"
   },
   "dependencies": {
     "grunt": "^1.0.1",
