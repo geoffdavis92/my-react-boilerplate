@@ -1,0 +1,9 @@
+{
+  "name": "geoffs-react-boilerplate",
+  "version": "0.0.0",
+  "description": "A React boilerplate by Geoff <geoffdavis92@gmail.com>",
+  "main": "index.js",
+  "repository": "https://github.com/geoffdavis92/my-react-boilerplate.git",
+  "author": "Geoff Davis <geoffdavis92@gmail.com>",
+  "license": "MIT"
+}
